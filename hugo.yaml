@@ -133,3 +133,8 @@ markup:
     guessSyntax: true
     lineNos: true
     style: monokai
+outputs:
+  home:
+    - html
+    - RSS
+    - JSON # necessary for search
