@@ -111,14 +111,18 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: search
-      name: search
-      url: /search/
-      weight: 10
+    - identifier: posts
+      name: posts
+      url: /posts/
+      weight: 20
     - identifier: tags
       name: tags
       url: /tags/
       weight: 20
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 10
     # - identifier: example
     #   name: example.org
     #   url: https://example.org
