@@ -1,6 +1,6 @@
 baseURL: https://hwagyesa.github.io/
 languageCode: en-us
-paginate: 5
+paginate: 10
 title: hwagyesa
 theme: PaperMod
 
@@ -111,9 +111,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: search
+      name: search
+      url: /search/
       weight: 10
     - identifier: tags
       name: tags
