@@ -128,6 +128,7 @@ pygmentsUseClasses: true
 markup:
   goldmark:
     extensions:
+      footnote: true
       passthrough:
         delimiters:
           block:
