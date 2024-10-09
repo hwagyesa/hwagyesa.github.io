@@ -16,5 +16,29 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: false
 ShowWordCount: false
 ShowRssButtonInSectionTermList: true
-UseHugoToc: true
+UseHugoToc: false
+math: true
 ---
+
+# Test
+
+```
+<p> hi </p>
+```
+
+```html
+<p> hi </p>
+```
+
+```python
+def test():
+    print("hi")
+
+if __name__ == "__main__":
+    test()
+```
+
+
+## Test
+
+$a^*=x-b^*$
