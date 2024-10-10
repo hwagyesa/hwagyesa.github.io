@@ -6,8 +6,15 @@
     <description>Recent content in Posts on hwagyesa</description>
     <generator>Hugo -- 0.135.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2024 17:12:23 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2024 16:48:20 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pytorch Speedrunning</title>
+      <link>http://localhost:1313/posts/pytorch-speedrunning/</link>
+      <pubDate>Wed, 09 Oct 2024 16:48:20 -0700</pubDate>
+      <guid>http://localhost:1313/posts/pytorch-speedrunning/</guid>
+      <description>a weak coder focusing on the wrong aspects :&amp;#39;)</description>
+    </item>
     <item>
       <title>Intro</title>
       <link>http://localhost:1313/posts/first/</link>
