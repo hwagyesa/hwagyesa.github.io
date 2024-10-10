@@ -38,9 +38,17 @@ barrier to quick experimentation in new problem areas 😄
 
 We'll spin this out implementing an extremely simple linear regression problem
 in pytorch. Something like the following data model:
-$$ \boldsymbol y = \boldsymbol X \boldsymbol \beta_o + \sigma \boldsymbol g,$$
+$$ \boldsymbol y = \boldsymbol X \boldsymbol \beta*o + \sigma \boldsymbol g,$$
 with $n$ observations, $d$ dimensions, noise standard deviation $\sigma > 0$,
 and everything i.i.d. $\mathcal N(0, 1)$.
+In the 'classical' regime where $n \geq d$, we have as usual that the problem
+$$ \min*{\boldsymbol \beta} \frac{1}{2n} \|\boldsymbol y - \boldsymbol X \boldsymbol \beta\|_2^2$$
+is solved in our random model (almost surely) by
+$$ \boldsymbol \beta_{\star} = (\boldsymbol X^\top \boldsymbol X)^{-1} \boldsymbol X^\top \boldsymbol y.$$
+It is not too hard to prove further that $\| \boldsymbol \beta_{\star} - \boldsymbol \beta_o \|_2 \lesssim \sqrt{\sigma^2 d / n}$ with overwhelming probability.
+So everything should be well-posed when we implement the model and test with
+a sample complexity of about $\sigma^2 d$.
+
 For this data model, we will:
 
 1. Code up the training loop.
@@ -134,7 +142,7 @@ def process_batch(model, X, Y, loss_fn, optimizer, training=True):
 We use the model to make predictions, then evaluate the loss. We accumulate
 gradients with `backward`, then step the optimizer and zero gradients.
 
-**_NOTE_**: it's helpful here to add some assets to debug your tensor shapes! Even on
+**_NOTE_**: it's helpful here to add some asserts to debug your tensor shapes! Even on
 this simple linear regression problem, I spent some amount of time debugging
 a case where my predictions variable was `(B, 1)`-shaped but my targets variable
 was `(B,)`-shaped and broadcasting messed up the loss.
