@@ -36,13 +36,14 @@ barrier to quick experimentation in new problem areas 😄
 
 # The exercise: linear regression
 
+<!-- prettier-ignore -->
 We'll spin this out implementing an extremely simple linear regression problem
 in pytorch. Something like the following data model:
-$$ \boldsymbol y = \boldsymbol X \boldsymbol \beta*o + \sigma \boldsymbol g,$$
+$$ \boldsymbol y = \boldsymbol X \boldsymbol \beta_o + \sigma \boldsymbol g,$$
 with $n$ observations, $d$ dimensions, noise standard deviation $\sigma > 0$,
 and everything i.i.d. $\mathcal N(0, 1)$.
 In the 'classical' regime where $n \geq d$, we have as usual that the problem
-$$ \min*{\boldsymbol \beta} \frac{1}{2n} \|\boldsymbol y - \boldsymbol X \boldsymbol \beta\|_2^2$$
+$$ \min_{\boldsymbol \beta} \frac{1}{2n} \|\boldsymbol y - \boldsymbol X \boldsymbol \beta\|_2^2$$
 is solved in our random model (almost surely) by
 $$ \boldsymbol \beta_{\star} = (\boldsymbol X^\top \boldsymbol X)^{-1} \boldsymbol X^\top \boldsymbol y.$$
 It is not too hard to prove further that $\| \boldsymbol \beta_{\star} - \boldsymbol \beta_o \|_2 \lesssim \sqrt{\sigma^2 d / n}$ with overwhelming probability.
